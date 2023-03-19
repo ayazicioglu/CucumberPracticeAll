@@ -9,12 +9,13 @@ public class GooglePage {
 
 
     public GooglePage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
         @FindBy(className = "gLFyf")
         public WebElement aramaKutusu;
 
-        @FindBy(className = "DFlfde SwHCTb")
+        @FindBy(xpath = "//span[@class='DFlfde SwHCTb']")
         public WebElement sonucYazisi;
 }

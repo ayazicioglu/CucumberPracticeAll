@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber1.xml"
         },
         features = "src/test/resources/features",
-        glue="stepdefinitions",
-        tags= "@smoke",
+        glue={"stepdefinitions","hooks"}, //stepdefinitions package icinde hooks yoksa ayrica belirtmeliyiz
+        tags= "@hooks",
         dryRun =false
 )
 public class Runner {

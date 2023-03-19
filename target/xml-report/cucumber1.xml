@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="31.805">
-    <testcase classname="US0002 Test" name="Kullanici google sitesinde kur karsilastirmasi yapabilmeli" time="12.629">
-        <system-out><![CDATA[Given Kullanici google adresine gider.......................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.456">
+    <testcase classname="US0002 Test" name="ahmet istenilen karsilastirmayi yapsin" time="14.772">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given Kullanici google adresine gider.......................................passed
 Then Kullanici cookies i kabul eder.........................................passed
-And Arama Kutusuna karsilastirma yapmak istedigi "dollar to euro" para birimlerini girer.passed
-And Para birimlerinin karsilastirmasini alir................................passed
-Then Karsilastirilacak olan para biriminin 20 den kucuk oldugu test eder....passed
-And Sayfayi kapatir.........................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="US0002 Test" name="t108 Kullanici istenilen karsilastirmayi yapabilmeli" time="9.877">
-        <system-out><![CDATA[Given Kullanici google adresine gider.......................................passed
-Then Kullanici cookies i kabul eder.........................................passed
-And Arama Kutusuna karsilastirma yapmak istedigi "Tl to Euro" para birimlerini girer.passed
+And Arama Kutusuna karsilastirma yapmak istedigi "ZLOTY to Tl" para birimlerini girer.passed
 Then Para birimlerinin karsilastirmasini alir...............................passed
-Then Karsilastirilacak olan para biriminin 20 den kucuk oldugu test eder....passed
-And Sayfayi kapatir.........................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="US0002 Test" name="ahmet istenilen karsilastirmayi yapsin" time="8.496">
-        <system-out><![CDATA[Given Kullanici google adresine gider.......................................passed
-Then Kullanici cookies i kabul eder.........................................passed
-And Arama Kutusuna karsilastirma yapmak istedigi "Tl to ZLOTY" para birimlerini girer.passed
-Then Para birimlerinin karsilastirmasini alir...............................passed
-Then Karsilastirilacak olan para biriminin 20 den kucuk oldugu test eder....passed
-And Sayfayi kapatir.........................................................passed
-]]></system-out>
+Then Karsilastirilacak olan para biriminin 4 den kucuk oldugu test eder.....failed
+And Sayfayi kapatir.........................................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.GoogleStepDefinitions.karsilastirilacak_olan_para_biriminin_den_kucuk_oldugu_test_eder(GoogleStepDefinitions.java:44)
+	at ✽.Karsilastirilacak olan para biriminin 4 den kucuk oldugu test eder(file:///C:/Users/Ahmet%20Yazıcıoğlu/IdeaProjects/CucumberPracticeAll/src/test/resources/features/US0002.feature:30)
+]]></failure>
     </testcase>
 </testsuite>

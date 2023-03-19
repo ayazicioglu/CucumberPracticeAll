@@ -28,7 +28,7 @@ public class GoogleStepDefinitions {
 
     @And("Arama Kutusuna karsilastirma yapmak istedigi {string} para birimlerini girer")
     public void aramaKutusunaKarsilastirmaYapmakIstedigiParaBirimleriniGirer(String karsilastirilacakPara) {
-        googlePage.aramaKutusu.sendKeys(karsilastirilacakPara+Keys.ENTER);
+        googlePage.aramaKutusu.sendKeys((karsilastirilacakPara)+Keys.ENTER);
 
     }
 

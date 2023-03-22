@@ -1,15 +1,16 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.DemoguruPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class DemoguruStepDefinition {
 
@@ -38,5 +39,11 @@ public class DemoguruStepDefinition {
         System.out.println(tableStr);
         Assert.assertTrue(sonuc);
     }
+//========================================================================================================
+    @And("{string} sirketinin Prev.Close degerini yazdirir")
+    public void sirketininPrevCloseDegeriniYazdirir(String sirketAdi) {
+        Map<String, String> tableMap = new HashMap<>();
 
+    }
+    //=====================================================================================================
 }

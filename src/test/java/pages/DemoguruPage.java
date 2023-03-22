@@ -1,5 +1,6 @@
 package pages;
 
+import io.cucumber.java.zh_cn.假如;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
@@ -16,6 +17,11 @@ public class DemoguruPage {
 
     @FindBy(xpath = "//a[@href='http://demo.guru99.com/']")
     public List<WebElement> tableElement;
+
+
+    @FindBy(tagName = "table")
+    public WebElement tumTablo;
+
 
 
 

@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.Select;
 import pages.HealPage;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class HealMethods {
     static HealPage healPage=new HealPage();
@@ -112,6 +115,19 @@ public class HealMethods {
         Assert.assertTrue(printIcon.isDisplayed());
 
 
+    }
+
+    public static void makeFilterTest(String filterName,int filtreKacinciSirada){
+        WebElement filter=Driver.getDriver().findElement(By.xpath("(//th[text()='"+filterName+"'])[1]"));
+        Assert.assertTrue(filter.isDisplayed());
+        filter.click();
+        List<String> filtreList=new ArrayList<>();
+        for (int i = filtreKacinciSirada; i <=1296 ; i=i+8) {
+            filtreList.add(Driver.getDriver().findElement(By.xpath("(//td)["+i+"]")).getText());
+        }
+        List<String> expectedList = new ArrayList<>(filtreList);
+        Collections.sort(expectedList);
+        Assert.assertEquals(filterName+" filter not functional",expectedList,filtreList);
     }
     public static void indirmeyiTestEt(String aranacakKelime,String format){
         //bu metot downloads klasöründeki dosyaları sıralar ve dosya ismi "aranacakKelime.format" içeriyor mu diye test eder

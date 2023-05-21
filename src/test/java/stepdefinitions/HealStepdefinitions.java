@@ -41,4 +41,9 @@ public class HealStepdefinitions {
     public void icon_test_yapilir() {
         HealMethods.makeIconTest();
     }
+
+    @Then("filter testi yapilir")
+    public void filterTestiYapilir() {
+        HealMethods.makeFilterTest("Guardian Name",3);
+    }
 }
